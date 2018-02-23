@@ -25,3 +25,7 @@
 *.iml
 
 *.xml
+
+config/secrets.yml
+
+config/secrets.yml
