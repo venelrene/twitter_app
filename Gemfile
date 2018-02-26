@@ -33,6 +33,8 @@ gem 'omniauth-twitter'
 
 
 gem 'haml'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
