@@ -13,6 +13,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %title TwitterApp
   %body
+    -#==== Navbar Start ===============================
+    = render :partial => 'layouts/navbar'
+    -#======== Navbar End=============================
     .container
       = yield
     / Optional JavaScript
