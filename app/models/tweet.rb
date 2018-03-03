@@ -12,12 +12,12 @@
 class Tweet < ApplicationRecord
 
   belongs_to :user, dependent: :destroy
-  validates :user_id, :body, presence: true
+  validates :user_id, presence: true
   validates :content, presence: true, length: { maximum: 140 }
   before_create :post_to_twitter
 
   def post_to_twitter
-    user.twitter.update(body)
+    user.twitter.update(content)
   end
 
 end

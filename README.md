@@ -22,3 +22,14 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
+* https://github.com/arunagw/omniauth-twitter
+
+* https://github.com/sferik/twitter
+
+* https://github.com/sferik/twitter/wiki/apps
+
+* https://github.com/sferik/twitter/wiki/apps
+
+* getbootstrap.com/docs/4.0

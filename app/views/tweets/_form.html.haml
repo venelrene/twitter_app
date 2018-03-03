@@ -8,7 +8,7 @@
         - tweet.errors.full_messages.each do |message|
           %li= message
   .field
-    = form.label :user_id
-    = form.number_field :user_id, id: :tweet_user_id
+    = form.label :content
+    = form.text_area :content
   .actions
     = form.submit

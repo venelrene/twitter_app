@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180303184417) do
+ActiveRecord::Schema.define(version: 20180303212643) do
 
   create_table "tweets", force: :cascade do |t|
     t.integer "user_id"
@@ -32,6 +32,11 @@ ActiveRecord::Schema.define(version: 20180303184417) do
     t.string "uid"
     t.string "token"
     t.string "secret"
+    t.integer "friends_count"
+    t.integer "followers_count"
+    t.integer "statuses_count"
+    t.string "profile_image_url"
+    t.string "profile_banner_url"
   end
 
 end
