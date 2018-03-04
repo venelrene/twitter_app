@@ -14,3 +14,18 @@
  //*= require_self
  */
 @import "bootstrap";
+
+#tweet-btn.btn.btn-primary {
+  line-height: 23px;
+  border: 2px solid rgba(239, 242, 245, 0.75);
+  border-radius: 40px;
+  letter-spacing: 1px;
+
+}
+
+#navbar-image.img-responsive.navbar-image, img {
+  margin-right: 19px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}

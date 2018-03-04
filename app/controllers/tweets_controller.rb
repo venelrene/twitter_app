@@ -1,10 +1,14 @@
 class TweetsController < ApplicationController
+  include TweetsHelper
+  before_action :signed_in_user
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
 
   # GET /tweets
   # GET /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.where(user_id: current_user.id).order(created_at: 'DESC')
+    @timeline = current_user.timeline
+    @user_tweets = current_user.user_tweets(current_user)
   end
 
   # GET /tweets/1

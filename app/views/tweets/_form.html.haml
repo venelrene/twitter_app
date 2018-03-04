@@ -1,14 +1,10 @@
-= form_with(model: tweet, local: true) do |form|
-  - if tweet.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(tweet.errors.count, "error")
-        prohibited this tweet from being saved:
-      %ul
-        - tweet.errors.full_messages.each do |message|
-          %li= message
-  .field
-    = form.label :content
-    = form.text_area :content
-  .actions
-    = form.submit
+- if tweet.errors.any?
+  = render :partial => 'tweets/error_explanation'
+
+= form_for(@tweet, html: { class: 'well clearfix' }) do |form|
+
+  .well.clearfix
+    = form.text_area :content, size: "50x5", placeholder: "What's happening?"
+    %br
+    = link_to 'Back', tweets_path, class: 'btn btn-primary pull-right'
+    = form.submit 'Tweet', class: 'btn btn-primary pull-right'

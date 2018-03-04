@@ -54,17 +54,6 @@ class User < ApplicationRecord
     end
   end
 
-  # Gets all 3200 of the users latest tweets and returns an array of tweets.
-  # This takes like 25-35 seconds to run.
-  def all_user_tweets
-    user = self
-    user_twitter_id = user.uid
-    collect_with_max_id do |max_id|
-      options = {count: 200, include_rts: true}
-      options[:max_id] = max_id unless max_id.nil?
-      user.twitter_api.user_timeline(user_twitter_id, options)
-    end
-  end
 
   # Fetch the timeline of Tweets by a user
   def user_tweets(user_id)
@@ -76,11 +65,5 @@ class User < ApplicationRecord
     twitter.home_timeline
   end
 
-  private
-    def collect_with_max_id(collection=[], max_id=nil, &block)
-      response = yield(max_id)
-      collection += response
-      response.empty? ? collection.flatten : collect_with_max_id(collection, response.last.id - 1, &block)
-    end
 
 end
