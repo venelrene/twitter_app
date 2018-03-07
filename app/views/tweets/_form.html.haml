@@ -3,8 +3,16 @@
 
 = form_for(@tweet, html: { class: 'well clearfix' }) do |form|
 
-  .well.clearfix
-    = form.text_area :content, size: "50x5", placeholder: "What's happening?"
-    %br
-    = link_to 'Back', tweets_path, class: 'btn btn-primary pull-right'
-    = form.submit 'Tweet', class: 'btn btn-primary pull-right'
+  .modal-dialog{:role => "document"}
+    .modal-content
+      .modal-header
+        %h5.modal-title New Tweet
+      .modal-body
+        %form
+          .form-group
+            = form.text_area :content, size: "56x5", placeholder: "What's happening?"
+      .modal-footer
+        = link_to 'Back', tweets_path, class: 'btn btn-secondary'
+        = form.submit 'Tweet', class: 'btn btn-primary'
+
+
