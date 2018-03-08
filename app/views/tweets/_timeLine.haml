@@ -1,15 +1,15 @@
-- @timeline.each do |tweet|
-  .card.w-50
-    .card-header
-      = image_tag tweet.user.profile_image_url_https, class: 'media-object'
-      %strong
-        = "#{tweet.user.name}"
-        = link_to "@#{tweet.user.screen_name}", "https://twitter.com/#{tweet.user.screen_name}", {id: "screenName"}
-      %time
-        \-
-        = time_ago_in_words tweet.created_at
-        ago
-    .card-body.btn-group
-      %blockquote.blockquote.mb-0
-        %p
-          = auto_link(tweet.text).html_safe
+-#- @timeline.each do |tweet|
+-#  .card.w-50
+-#    .card-header
+-#      = image_tag tweet.user.profile_image_url_https, class: 'media-object'
+-#      %strong
+-#        = "#{tweet.user.name}"
+-#        = link_to "@#{tweet.user.screen_name}", "https://twitter.com/#{tweet.user.screen_name}", {id: "screenName"}
+-#      %time
+-#        \-
+-#        = time_ago_in_words tweet.created_at
+-#        ago
+-#    .card-body.btn-group
+-#      %blockquote.blockquote.mb-0
+-#        %p
+-#          = auto_link(tweet.text).html_safe
