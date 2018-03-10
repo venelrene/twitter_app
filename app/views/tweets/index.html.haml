@@ -1,6 +1,7 @@
 %p#notice= notice
 
 .row
+  -#========== Profile Card info left ========
   .col-4
     .card{:style => "width: 18rem;"}
       %img.card-img-top
@@ -21,9 +22,7 @@
           %li.arrange-stats
             %span.label Followers
             %span.value= current_user.followers_count
-
-
-
+  -#=========== Api & Local TimeLine middle =======
   .col-6
     - @tweets.each do |tweet|
       .list-group
@@ -47,9 +46,11 @@
 
 
     = render :partial => 'timeLine'
-
+  -#=========== Info card/footer ===========
   .col-sm-2
     .card.text-center
-      .card-body#left-card
-        %p.card-text This is a sample app using Tweeter api to fetch and display data.
+      .card-body#right-card
+        %p.card-text This is just a sample project using the Tweeter API to fetch and display data.
+        %strong
+          © TwitterApp
         -#%a.btn.btn-primary{:href => "#"} Go somewhere
