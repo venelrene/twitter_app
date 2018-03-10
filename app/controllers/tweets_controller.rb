@@ -7,7 +7,7 @@ class TweetsController < ApplicationController
   # GET /tweets.json
   def index
     @tweets = Tweet.where(user_id: current_user.id).order(created_at: 'DESC')
-    @timeline = current_user.timeline
+    # @timeline = current_user.timeline
     @user_tweets = current_user.user_tweets(current_user)
   end
 

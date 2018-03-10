@@ -24,7 +24,7 @@
 
 
 
-  .col-8
+  .col-6
     - @tweets.each do |tweet|
       .list-group
         .a.list-group-item.list-group-item-action.flex-column.align-items-start{:href => "tweets/#{tweet.id}"}
@@ -35,16 +35,21 @@
               %strong#username
                 = current_user.name
               %nickname
-                = "@#{current_user.nickname}"
+                = "@#{current_user.nickname} \•"
 
               %small.text-muted#timedate
-                \•
                 = tweet.created_at.strftime("%d %b %Y")
           %p.mb-1#tweet
-            = link_to "#{tweet.content}", tweet
+            = tweet.content
             %small.text-muted
               - if current_user
                 = link_to 'show', tweet, {class: "small text-muted"}
 
 
     = render :partial => 'timeLine'
+
+  .col-sm-2
+    .card.text-center
+      .card-body#left-card
+        %p.card-text This is a sample app using Tweeter api to fetch and display data.
+        -#%a.btn.btn-primary{:href => "#"} Go somewhere
