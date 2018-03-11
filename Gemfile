@@ -37,6 +37,7 @@ gem 'haml'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
 
+gem "figaro"
 
 # gem "pkg-config"
 # gem 'nokogiri', '~> 1.8', '>= 1.8.1'

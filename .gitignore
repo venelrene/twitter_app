@@ -26,12 +26,11 @@
 
 *.xml
 
-config/secrets.yml
-
-config/secrets.yml
-
 .idea/.rakeTasks
 
 .idea/.generators
 
 .env
+
+# Ignore application configuration
+/config/application.yml
