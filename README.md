@@ -1,35 +1,14 @@
 # README
+Ruby version: 2.5.0 and Rails Version: 5.1.5
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This goal of this project was to build a simple Twitter client. The application uses the Twitter API.
+* [Link](https://trello.com/b/VR6yaLA0/twiter-app-izea) for Requirments and Layout
 
-Things you may want to cover:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+Some refrences used:
 * https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/user-object
+* https://twitter.com
 * https://github.com/arunagw/omniauth-twitter
-
 * https://github.com/sferik/twitter
-
 * https://github.com/sferik/twitter/wiki/apps
-
-* https://github.com/sferik/twitter/wiki/apps
-
 * getbootstrap.com/docs/4.0
