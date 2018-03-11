@@ -274,3 +274,38 @@ nickname a {
 .video-container video.fillWidth {
   width: 100%;
 }
+
+#home-page {
+  z-index: 1000;
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: transparent;
+}
+
+#home-page-title {
+  color: #f7f7c4;
+  font-weight: bold;
+  letter-spacing: 1px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+  text-decoration-line: underline;
+}
+
+p.lead {
+  //font-weiht: bold;
+  color: #fff6ef;
+  -webkit-text-stroke-color: white;
+  -webkit-text-stroke-width: 2px;
+  font-size: 2.25rem;
+}
+
+strong#center-text {
+  color: #66cffb;
+  font-weight: bold;
+  letter-spacing: 4px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #f8f7c4;
+}
