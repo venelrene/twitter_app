@@ -8,9 +8,12 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.where(user_id: current_user.id).order(created_at: 'DESC')
     @timeline = current_user.timeline
-    @user_tweets = current_user.user_tweets(current_user)
   end
 
+  def personal
+    @tweets = Tweet.where(user_id: current_user.id).order(created_at: 'DESC')
+    @user_tweets = current_user.user_tweets(current_user)
+  end
   # GET /tweets/1
   # GET /tweets/1.json
   def show
@@ -66,6 +69,7 @@ class TweetsController < ApplicationController
   end
 
   private
+
     # Use callbacks to share common setup or constraints between actions.
     def set_tweet
       @tweet = Tweet.find(params[:id])

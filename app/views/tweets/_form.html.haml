@@ -1,18 +1,19 @@
-- if tweet.errors.any?
-  = render :partial => 'tweets/error_explanation'
+.container
+  - if tweet.errors.any?
+    = render :partial => 'tweets/error_explanation'
 
-= form_for(@tweet, html: { class: 'well clearfix' }) do |form|
+  = form_for(@tweet, html: { class: 'well clearfix' }) do |form|
 
-  .modal-dialog{:role => "document"}
-    .modal-content
-      .modal-header
-        %h5.modal-title New Tweet
-      .modal-body
-        %form
-          .form-group
-            = form.text_area :content, size: "56x5", placeholder: "What's happening?"
-      .modal-footer
-        = link_to 'Back', tweets_path, class: 'btn btn-secondary'
-        = form.submit 'Tweet', class: 'btn btn-primary'
+    .modal-dialog{:role => "document"}
+      .modal-content
+        .modal-header
+          %h5.modal-title New Tweet
+        .modal-body
+          %form
+            .form-group
+              = form.text_area :content, size: "56x5", placeholder: "What's happening?"
+        .modal-footer
+          = link_to 'Back', tweets_path, class: 'btn btn-secondary'
+          = form.submit 'Tweet', class: 'btn btn-primary'
 
 

@@ -1,1 +1,13 @@
-%h1 Welcome
+.homepage-hero-module
+  .video-container
+    .filter
+    %video.fillWidth{:autoplay => "", :loop => ""}
+      -#%source{:src => "app/assets/MP4/Flying-Birds.mp4", :type => "video/mp4"}>
+      %source{:src => "https://storage.googleapis.com/coverr-main/mp4/Flying-Birds.mp4", :type => "video/mp4"}>
+      Your browser does not support the video tag. I suggest you upgrade your browser.
+      -#%source{:src => "../../assets/WEBM/Flying-Birds.webm", :type => "video/webm"}>
+      %source{:src => "https://storage.googleapis.com/coverr-main/mp4/Flying-Birds.webm", :type => "video/webm"}>
+      Your browser does not support the video tag. I suggest you upgrade your browser.
+    .poster.hidden
+      %img{:alt => "", :src => "././assets/images/Flying-Birds.jpg"}/
+      -#%img{:alt => "", :src => "https://storage.googleapis.com/coverr-public/poster/Flying-Birds.jpg"}/

@@ -1,53 +1,53 @@
-
-%p#notice= notice
--#### User TimeLine ####-
-.row
-  -#========== Profile Card info left ========
-  .col-4
-    .card{:style => "width: 18rem;"}
-      %img.card-img-top
-        = link_to tweets_personal_path  do
-          = image_tag current_user.profile_banner_url, id: "profile-banner"
-          = image_tag current_user.profile_image_url, id: "profile-image"
-      .card-body
-        %h5.card-title
-          = current_user.name
-          %small.text-muted
-            = "@#{current_user.nickname}"
-            = "| #{current_user.location}" if current_user.location?
-        %ul.arrange
-          %li.arrange-stats
-            %span.label Tweets
-            %span.value= current_user.statuses_count
-          %li.arrange-stats
-            %span.label Following
-            %span.value= current_user.friends_count
-          %li.arrange-stats
-            %span.label Followers
-            %span.value= current_user.followers_count
-  -#=========== Api & Local TimeLine middle =======
-  .col-6
-    - @tweets.each do |tweet|
-      .list-group
-        .a.list-group-item.list-group-item-action.flex-column.align-items-start{:href => "tweets/#{tweet.id}"}
-          .card-img-top
-            = image_tag current_user.image
-          .d-flex.w-100.justify-content-between
-            %h5.mb-1
-              %strong#username
-                = current_user.name
-              %nickname
-                = "@#{current_user.nickname} \•"
-
-              %small.text-muted#timedate
-                = tweet.created_at.strftime("%d %b %Y")
-          %p.mb-1#tweet
-            = tweet.content
+.container
+  %p#notice= notice
+  -#### User TimeLine ####-
+  .row
+    -#========== Profile Card info left ========
+    .col-4
+      .card{:style => "width: 18rem;"}
+        %img.card-img-top
+          = link_to tweets_personal_path  do
+            = image_tag current_user.profile_banner_url, id: "profile-banner"
+            = image_tag current_user.profile_image_url, id: "profile-image"
+        .card-body
+          %h5.card-title
+            = current_user.name
             %small.text-muted
-              - if current_user
-                = link_to 'show', tweet, {class: "small text-muted"}
+              = "@#{current_user.nickname}"
+              = "| #{current_user.location}" if current_user.location?
+          %ul.arrange
+            %li.arrange-stats
+              %span.label Tweets
+              %span.value= current_user.statuses_count
+            %li.arrange-stats
+              %span.label Following
+              %span.value= current_user.friends_count
+            %li.arrange-stats
+              %span.label Followers
+              %span.value= current_user.followers_count
+    -#=========== Api & Local TimeLine middle =======
+    .col-6
+      - @tweets.each do |tweet|
+        .list-group
+          .a.list-group-item.list-group-item-action.flex-column.align-items-start{:href => "tweets/#{tweet.id}"}
+            .card-img-top
+              = image_tag current_user.image
+            .d-flex.w-100.justify-content-between
+              %h5.mb-1
+                %strong#username
+                  = current_user.name
+                %nickname
+                  = "@#{current_user.nickname} \•"
 
-    = render :partial => 'timeLine'
-  -#=========== Info card/footer ===========
-  = render :partial => 'footer'
+                %small.text-muted#timedate
+                  = tweet.created_at.strftime("%d %b %Y")
+            %p.mb-1#tweet
+              = tweet.content
+              %small.text-muted
+                - if current_user
+                  = link_to 'show', tweet, {class: "small text-muted"}
+
+      = render :partial => 'timeLine'
+    -#=========== Info card/footer ===========
+    = render :partial => 'footer'
 
