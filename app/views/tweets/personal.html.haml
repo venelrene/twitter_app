@@ -1,6 +1,6 @@
 
 %p#notice= notice
--#### User TimeLine ####-
+-#### User Tweet TimeLine ####-
 .row
   -#========== Profile Card info left ========
   .col-4
@@ -47,7 +47,22 @@
               - if current_user
                 = link_to 'show', tweet, {class: "small text-muted"}
 
-    = render :partial => 'timeLine'
+    -#=========== Info card/footer ===========
+    - @user_tweets.each do |tweet|
+      .list-group
+        .list-group-item.list-group-item-action.flex-column.align-items-start
+          .card-img-top
+            = image_tag tweet.user.profile_image_url_https, class: 'media-object'
+          .d-flex.w-100.justify-content-between
+            %h5.mb-1
+              %strong#username
+                = tweet.user.name
+              %nickname
+                = link_to "@#{tweet.user.screen_name}", "https://twitter.com/#{tweet.user.screen_name} \•"
+
+              %small.text-muted#timedate
+                = time_ago_in_words tweet.created_at
+          %p.mb-1#tweet
+            = auto_link(tweet.text).html_safe
   -#=========== Info card/footer ===========
   = render :partial => 'footer'
-

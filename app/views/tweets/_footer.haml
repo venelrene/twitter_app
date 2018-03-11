@@ -1,0 +1,16 @@
+.col-sm-2
+  .card.text-center
+    .card-body#right-card
+      - if current_page?(:controller => 'tweets', :action => 'index')
+        %h5
+          Viewing TimeLine
+      - else
+        %h5
+          Viewing Your Tweet
+
+  .card.text-center
+    .card-body#right-card
+      %p.card-text This is just a sample project using the Tweeter API to fetch and display data.
+      %strong
+        © TwitterApp
+      -#%a.btn.btn-primary{:href => "#"} Go somewhere
