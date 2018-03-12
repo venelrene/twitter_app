@@ -141,7 +141,7 @@ span.value {
   padding-top: 3px;
 }
 
-#username, #username a, a:hover {
+#username, #username a, #username a:hover {
   word-break: break-all;
   color: #14171a !important;
   font-size: 14px;
@@ -168,7 +168,7 @@ p#tweet a{
   color: #000;
 }
 
-nickname, nickname a, a:hover {
+nickname, nickname a, nickname a:hover {
   font-size: 14px;
   color: #657786;
 }
