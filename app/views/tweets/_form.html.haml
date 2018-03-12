@@ -11,7 +11,7 @@
         .modal-body
           %form
             .form-group
-              = form.text_area :content, size: "56x5", placeholder: "What's happening?"
+              = form.text_area :content, placeholder: "What's happening?"
         .modal-footer
           = link_to 'Back', tweets_path, class: 'btn btn-secondary'
           = form.submit 'Tweet', class: 'btn btn-primary'
