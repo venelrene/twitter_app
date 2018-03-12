@@ -35,9 +35,9 @@
             .d-flex.w-100.justify-content-between
               %h5.mb-1
                 %strong#username
-                  = current_user.name
+                  = link_to "#{current_user.name}", "https://twitter.com/#{current_user.nickname}"
                 %nickname
-                  = "@#{current_user.nickname} \•"
+                  = link_to "@#{current_user.nickname}", "https://twitter.com/#{current_user.nickname} \•"
 
                 %small.text-muted#timedate
                   = tweet.created_at.strftime("%d %b %Y")

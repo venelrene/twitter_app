@@ -11,8 +11,7 @@
       %li.nav-item
         - if current_user
           %a.nav-link#username Signed in as #{current_user.name}
-    = link_to (root_path) do
-      %img{:id => "nav-logo", :src => "https://www.shareicon.net/data/2016/07/05/791287_logo_512x512.png"}
+    %img{:id => "nav-logo", :src => "https://www.shareicon.net/data/2016/07/05/791287_logo_512x512.png"}
     %form.form-inline.my-2.my-lg-0
       - if current_user
         = link_to image_tag(current_user.image), tweets_personal_path, class: 'navbar-image', id: 'navbar-img'

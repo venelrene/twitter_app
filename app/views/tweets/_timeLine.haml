@@ -1,12 +1,12 @@
 - @timeline.each do |tweet|
-  .list-group
+  .list-groups
     .list-group-item.list-group-item-action.flex-column.align-items-start
       .card-img-top
         = image_tag tweet.user.profile_image_url_https, class: 'media-object'
       .d-flex.w-100.justify-content-between
         %h5.mb-1
           %strong#username
-            = tweet.user.name
+            = link_to "#{tweet.user.name}", "https://twitter.com/#{tweet.user.screen_name}"
           %nickname
             = link_to "@#{tweet.user.screen_name}", "https://twitter.com/#{tweet.user.screen_name} \•"
 
