@@ -2,26 +2,17 @@
 .jumbotron.jumbotron-fluid#home-page
   .container
     %h1.display-4
-      Welcome to
       %strong#home-page-title
         TwitterApp
     %p.lead
-      Please
       %strong#center-text
-        Login
-      above
+        = link_to "Log in", "/auth/twitter", class: 'btn btn-primary', id: 'home-login-btn'
+
 
 
 .homepage-hero-module
   .video-container
     .filter
-    %video.fillWidth{:autoplay => "", :loop => ""}
-      -#%source{:src => "app/assets/MP4/Flying-Birds.mp4", :type => "video/mp4"}>
-      %source{:src => "https://storage.googleapis.com/coverr-main/mp4/Flying-Birds.mp4", :type => "video/mp4"}>
-      Your browser does not support the video tag. I suggest you upgrade your browser.
-      -#%source{:src => "../../assets/WEBM/Flying-Birds.webm", :type => "video/webm"}>
-      %source{:src => "https://storage.googleapis.com/coverr-main/mp4/Flying-Birds.webm", :type => "video/webm"}>
-      Your browser does not support the video tag. I suggest you upgrade your browser.
-    .poster.hidden
-      %img{:alt => "", :src => "/assets/images/Flying-Birds.jpg"}
-      -#%img{:alt => "", :src => "https://storage.googleapis.com/coverr-public/poster/Flying-Birds.jpg"}/
+    = video_tag("Flying-Birds.mp4", autoplay: true, loop: true, poster: "Flying-Birds.jpg", class: "fillWidth")
+
+

@@ -1,17 +1,17 @@
 %nav.navbar.sticky-top.navbar-expand-lg.navbar-dark.bg
 
-  %img{:id => "nav-home-logo", :width => "30", :height => "30", :src => "https://cdn4.iconfinder.com/data/icons/roundies-2/32/birdhouse-512.png"}
-    - if current_user
-      = link_to 'Home', tweets_path, class: 'navbar-brand', id: 'navbar-brand'
-    - else
-      = link_to 'Home', root_path, class: 'navbar-brand', id: 'navbar-brand'
+  = link_to image_tag("home-8x.png", :id => "nav-home-logo", :width => "30", :height => "30"), tweets_path
+  - if current_user
+    = link_to 'Home', tweets_path, class: 'navbar-brand', id: 'navbar-brand'
+  - else
+    = link_to 'Home', root_path, class: 'navbar-brand', id: 'navbar-brand'
 
   #collapse.navbar-collapse
     %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
       %li.nav-item
         - if current_user
           %a.nav-link#username Signed in as #{current_user.name}
-    %img{:id => "nav-logo", :src => "https://www.shareicon.net/data/2016/07/05/791287_logo_512x512.png"}
+    = image_tag("tw-logo.png", :id => "nav-logo")
     %form.form-inline.my-2.my-lg-0
       - if current_user
         = link_to image_tag(current_user.image), tweets_personal_path, class: 'navbar-image', id: 'navbar-img'

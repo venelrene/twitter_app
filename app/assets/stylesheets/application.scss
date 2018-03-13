@@ -41,8 +41,8 @@ nav.navbar.navbar-expand-lg.navbar-dark.bg {
 }
 
 img#nav-logo {
-  width: 25px;
-  height: 25px;
+  width: 70px;
+  height: 49px;
   position: absolute;
   left: 50%;
   margin-left: -24px;
@@ -83,6 +83,15 @@ img#profile-image {
 #logout {
   padding-left: 16px;
   color: #3a3a3a;
+}
+
+#home-login-btn {
+  color: #fff;
+  background-color: #1686ff7a;
+  letter-spacing: 1px;
+  border-radius: 100px;
+  border: rgba(247, 243, 243, 0.03);
+  font-size: large;
 }
 
 h5.card-title {
@@ -278,7 +287,9 @@ nickname, nickname a, nickname a:hover {
   color: #fff;
   background-color: transparent;
 }
-
+.display-4 {
+  font-size: 5.5rem;
+}
 #home-page-title {
   color: #f7f7c4;
   font-weight: bold;
