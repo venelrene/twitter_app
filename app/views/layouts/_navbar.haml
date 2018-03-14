@@ -17,6 +17,5 @@
         = link_to image_tag(current_user.image), tweets_personal_path, class: 'navbar-image', id: 'navbar-img'
         = link_to 'Tweet', new_tweet_path, class: 'btn btn-primary', id: 'tweet-btn'
         = link_to 'Log out', logout_path, id: "logout"
-
       - else
         = link_to "Log in", "/auth/twitter", class: 'btn btn-primary', id: 'tweet-btn'
