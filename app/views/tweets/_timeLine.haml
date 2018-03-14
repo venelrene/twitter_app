@@ -8,8 +8,8 @@
           %strong#username
             = link_to "#{tweet.user.name}", "https://twitter.com/#{tweet.user.screen_name}"
           %nickname
-            = link_to "@#{tweet.user.screen_name}", "https://twitter.com/#{tweet.user.screen_name} \•"
-
+            = link_to "@#{tweet.user.screen_name}", "https://twitter.com/#{tweet.user.screen_name}"
+            \•
           %small.text-muted#timedate
             = time_ago_in_words tweet.created_at
       %p.mb-1#tweet

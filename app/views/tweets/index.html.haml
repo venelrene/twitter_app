@@ -37,8 +37,8 @@
                 %strong#username
                   = link_to "#{current_user.name}", "https://twitter.com/#{current_user.nickname}"
                 %nickname
-                  = link_to "@#{current_user.nickname}", "https://twitter.com/#{current_user.nickname} \•"
-
+                  = link_to "@#{current_user.nickname}", "https://twitter.com/#{current_user.nickname}"
+                  \•
                 %small.text-muted#timedate
                   = tweet.created_at.strftime("%d %b %Y")
             %p.mb-1#tweet
