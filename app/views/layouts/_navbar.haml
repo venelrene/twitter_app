@@ -1,16 +1,22 @@
 %nav.navbar.sticky-top.navbar-expand-lg.navbar-dark.bg
 
-  = link_to image_tag("home-8x.png", :id => "nav-home-logo", :width => "30", :height => "30"), tweets_path
+  = link_to image_tag("home-8x.png", :id => "nav-home-logo"), root_path
   - if current_user
-    = link_to 'Home', tweets_path, class: 'navbar-brand', id: 'navbar-brand'
+    = link_to 'Home', root_path, class: 'navbar-brand', id: 'navbar-brand-home'
+
+    = link_to image_tag("flash-8x.png", :id => "nav-flash-logo"), tweets_path
+    = link_to 'Timeline', tweets_path, class: 'navbar-brand', id: 'navbar-brand-flash'
+
+    = link_to image_tag("person-8x.png", :id => "nav-person-logo"), tweets_personal_path
+    = link_to 'Personal', tweets_personal_path, class: 'navbar-brand', id: 'navbar-brand-person'
+
   - else
     = link_to 'Home', root_path, class: 'navbar-brand', id: 'navbar-brand'
 
   #collapse.navbar-collapse
     %ul.navbar-nav.mr-auto.mt-2.mt-lg-0
       %li.nav-item
-        - if current_user
-          %a.nav-link#username Signed in as #{current_user.name}
+
     = image_tag("tw-logo.png", :id => "nav-logo")
     %form.form-inline.my-2.my-lg-0
       - if current_user
